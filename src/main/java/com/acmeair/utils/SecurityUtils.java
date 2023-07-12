@@ -43,7 +43,7 @@ import org.jose4j.lang.JoseException;
 @ApplicationScoped
 public class SecurityUtils {
 
-  @Inject @ConfigProperty(name = "KEYSTORE_LOCATION", defaultValue = "/output/resources/security/keyJWT.p12")
+  @Inject @ConfigProperty(name = "KEYSTORE_LOCATION", defaultValue = "/config/resources/security/keyJWT.p12")
   private String keyStoreLocation;
 
   //probably not a good idea to use as an env variable? But doing this for now.
