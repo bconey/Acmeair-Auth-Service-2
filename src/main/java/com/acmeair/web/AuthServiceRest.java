@@ -77,7 +77,7 @@ public class AuthServiceRest {
       String token = secUtils.generateJwt(login, JWT_GROUP);
 
       // The jwtToken is sent back as a cookie
-      return Response.ok("logged in").header("Set-Cookie", JWT_COOKIE_NAME + "=" + token + "; Path=/")
+      return Response.ok("logged in").header("Set-Cookie", JWT_COOKIE_NAME + "=" + token + "; Path=/; Domain=appflow.dev.ibmappdomain.cloud")
           .header("Set-Cookie", USER_COOKIE_NAME + "=" + login + "; Path=/").build();
 
     } catch (Exception e) {
