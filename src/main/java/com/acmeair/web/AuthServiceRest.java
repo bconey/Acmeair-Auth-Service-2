@@ -78,7 +78,7 @@ public class AuthServiceRest {
 
       // The jwtToken is sent back as a cookie
       return Response.ok("logged in").header("Set-Cookie", JWT_COOKIE_NAME + "=" + token + "; Path=/; Domain=appflow.dev.ibmappdomain.cloud")
-          .header("Set-Cookie", USER_COOKIE_NAME + "=" + login + "; Path=/").build();
+          .header("Set-Cookie", USER_COOKIE_NAME + "=" + login + "; Path=/; Domain=appflow.dev.ibmappdomain.cloud").build();
 
     } catch (Exception e) {
       e.printStackTrace();
