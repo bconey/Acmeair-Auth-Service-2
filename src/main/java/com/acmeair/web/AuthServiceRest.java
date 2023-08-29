@@ -75,7 +75,7 @@ public class AuthServiceRest {
 
       // Generate simple JWT with login as the Subject
       String token = secUtils.generateJwt(login, JWT_GROUP);
-      Response.ok(token).build();
+      return Response.ok(token).build();
 
       // The jwtToken is sent back as a cookie
       //return Response.ok("logged in").header("Set-Cookie", JWT_COOKIE_NAME + "=" + token + "; Path=/; Domain=appflow.dev.ibmappdomain.cloud")
